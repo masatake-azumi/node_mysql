@@ -1,0 +1,25 @@
+<a href="/item/create" class="btn btn-sm btn-outline-primary">新規</a>
+<table class="table table-responsive">
+  <tr>
+    <th></th>
+    <th>商品コード</th>
+    <th>商品名</th>
+    <th>価格</th>
+  </tr>
+  <% items.forEach((item) => { %>
+    <tr>
+      <td>
+        <a href="/item/edit/<%= item.id %>" class="btn btn-sm btn-outline-primary">編集</a>
+      </td>
+      <td>
+        <%= item.code %>
+      </td>
+      <td>
+        <%= item.name %>
+      </td>
+      <td>
+        <%= item.price %>
+      </td>
+    </tr>
+  <% }) %>
+</table>
